@@ -13,8 +13,12 @@ class Catalog extends Component {
     let inputValue = e.target.value;
     this.setState({
       [e.target.id]: inputValue
-    });
-  };
+    })
+    const titleCatalog = [...this.props.catalog]
+    const options= titleCatalog.filter(t => t.title.toUpperCase().toLowerCase().includes(e.target.value))
+    console.log(options)
+
+  }
 
   render() {
     return (
@@ -27,22 +31,27 @@ class Catalog extends Component {
         />
         <div>${this.props.budget}</div>
 
+      <div>
+        <h1>Rented</h1>
         <div className="rented-container">
-          {this.props.catalog.map(m =>
+        {this.props.catalog.map(m =>
             m.isRented ? (
-                <div>
+              <div>
                 <Movie movie={m} key={m.id} rentMovie={this.props.rentMovie} />
-                </div>
+              </div>
             ) : null
           )}
         </div>
         <hr />
+        <h1>Catalog</h1>
         <div className="movies-container">
           {this.props.catalog.map(m => (
             <Movie movie={m} key={m.id} rentMovie={this.props.rentMovie} />
           ))}
         </div>
       </div>
+    </div>
+
     );
   }
 }

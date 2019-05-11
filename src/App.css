@@ -1,41 +1,30 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body{
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+#main-links{
+display: grid;
+grid-template-columns: 1fr 1fr 2fr;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#logo{
+  text-align: end;
+  font-size: 2em;
 }
 
-.users{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  
+#catalog{
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
+}
+#home{
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
+  text-align: center;
 }
 
 #chosenMovie{
@@ -44,6 +33,8 @@
   background-size: cover;
 
 }
+
+
 
 #movie{
   display: inline-block;
@@ -69,4 +60,36 @@ hr {
   border: 0;
   height: 3px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.users{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  text-align: center;
+}
+
+#user{
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  font-size: 36px;
+  font-weight: 600;
+  color: black;
+  
+ 
+
+}
+
+#watching{
+  color: white;
+  text-align: center;
+  margin-top: 5%;
+  font-size: 2em;
+}
+
+h1{
+  color: white;
+  margin-top: 5%;
+  font-size: 1.5em;
 }

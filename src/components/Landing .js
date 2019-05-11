@@ -6,10 +6,10 @@ class Landing  extends Component {
         super()
         this.state = {
             users : [
-                {name: "Srul", bColor: "blue"},
-                {name: "Shiran", bColor: "red"},
-                {name: "Nadav", bColor: "yellow"},
-                {name: "Chen", bColor: "green"}
+                {name: "Srul", img: "https://pbs.twimg.com/media/CadzcrOW0AE5hzG.jpg"},
+                {name: "Nadav", img: "https://www.staffstars.com/images/user/missing.png"},
+                {name: "Shiran", img: "https://blog.eu.playstation.com/files/avatars/avatar_4937499.jpg"},
+                {name: "Chen", img: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/f9fa8a33850498.56ba69ac2cc3a.png"}
             ]
         }
 
@@ -18,15 +18,18 @@ class Landing  extends Component {
 
     render() {
         return (
+            <div>
+            <h1 id= "watching">Who's Watching?</h1>
             <div  className = "users">
-                {this.state.users
+                 {this.state.users
                     .map(u =>
-                    <Link to ="/catalog"> 
-                        <div key = {u.name} style ={{backgroundColor : u.bColor}} >
+                    <Link to ="/catalog" style={{ textDecoration: 'none' }}> 
+                        <div id="user" key = {u.name} style={{backgroundImage: `url(${u.img})`}} >
                             {u.name}
                         </div>
                     </Link>)}
             </div>
+        </div>
         )
     }
 }

@@ -60,7 +60,37 @@ class App extends Component {
             "https://images-na.ssl-images-amazon.com/images/I/51ArFYSFGJL.jpg",
           descrShort:
             "Basically the same as the original, except now Hermi-- Emma Wattson plays Belle, fittingly so some would say, given how actively progressive she is regarding women's rights. Rumor has it that in the bonus scenes she whips out a wand and turns Gaston into a toad, but in order to watch those scenes you need to recite a certain incantation."
-        }
+        },
+        {
+          id: 5,
+          isRented: false,
+          title: "Peter Pan",
+          year: 1954,
+          img:
+            "https://is5-ssl.mzstatic.com/image/thumb/Video115/v4/63/fa/37/63fa3745-fa49-3a6b-f805-737c5e9a7f7f/pr_source.lsr/268x0w.png",
+          descrShort:
+            "Peter Pan is a 1953 American animated fantasy adventure film produced by Walt Disney and based on the play Peter Pan, or The Boy Who Wouldn't Grow Up by J. M. Barrie. It is the 14th Disney animated feature film and was originally released on February 5, 1953, by RKO Radio Pictures. Peter Pan is the final Disney animated feature released through RKO before Walt Disney's founding of his own distribution company, Buena Vista Distribution, later in 1953 after the film was released. Peter Pan is also the final Disney film in which all nine members of Disney's Nine Old Men worked together as directing animators. It is also the second Disney animated film starring Kathryn Beaumont, Heather Angel, and Bill Thompson after their roles in the animated feature Alice in Wonderland."
+        },
+        {
+          id: 6,
+          isRented: false,
+          title: "Toy Story",
+          year: 1995,
+          img:
+            "https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg",
+          descrShort:
+            "Toy Story is a 1995 American computer-animated adventure comedy film produced by Pixar Animation Studios and released by Walt Disney Pictures. The feature-film directorial debut of John Lasseter, it was the first feature-length film to be entirely computer-animated, as well as the first feature film from Pixar"
+        },
+        {
+          id: 7,
+          isRented: false,
+          title: "Mulan",
+          year: 1998,
+          img:
+            "https://images-na.ssl-images-amazon.com/images/I/91G57FBjIxL._SL1500_.jpg",
+          descrShort:
+            "Mulan is a 1998 American animated musical action adventure film produced by Walt Disney Feature Animation for Walt Disney Pictures. It is based on the Chinese legend of Hua Mulan, and was Disney's 36th animated feature and the ninth animated film produced and released during the Disney Renaissance. It was directed by Tony Bancroft and Barry Cook, with story by Robert D. San Souci and screenplay by Rita Hsiao, Philip LaZebnik, Chris Sanders, Eugenia Bostwick-Singer, and Raymond Singer"
+        },
       ]
     }
   }
@@ -76,17 +106,16 @@ class App extends Component {
       function() {
         console.log(this.state.catalog)
       }
-    );
-  };
+    )
+  }
 
   render() {
     return (
       <Router>
         <div id="main-links">
+          <Link to="/" id = "home">Home</Link>
+          <Link to="/catalog" id= "catalog">Catalog</Link>
           <div id="logo">REFLIX</div>
-
-          <Link to="/">Home</Link>
-          <Link to="/catalog">Catalog</Link>
         </div>
         <Route exact path="/" component={Landing} />
         <Route
