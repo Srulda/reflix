@@ -32,7 +32,7 @@ class Catalog extends Component {
         <div>${this.props.budget}</div>
 
       <div>
-        <h1>Rented</h1>
+        {/* <h1>Rented</h1>
         <div className="rented-container">
         {this.props.catalog.map(m =>
             m.isRented ? (
@@ -41,8 +41,8 @@ class Catalog extends Component {
               </div>
             ) : null
           )}
-        </div>
-        <hr />
+        </div> */}
+        <hr className = "accessory" />
         <h1>Catalog</h1>
         <div className="movies-container">
           {this.props.catalog.map(m => (

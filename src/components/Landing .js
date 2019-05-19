@@ -6,10 +6,10 @@ class Landing  extends Component {
         super()
         this.state = {
             users : [
-                {name: "Srul", img: "https://pbs.twimg.com/media/CadzcrOW0AE5hzG.jpg"},
-                {name: "Nadav", img: "https://www.staffstars.com/images/user/missing.png"},
-                {name: "Shiran", img: "https://blog.eu.playstation.com/files/avatars/avatar_4937499.jpg"},
-                {name: "Chen", img: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/f9fa8a33850498.56ba69ac2cc3a.png"}
+                {name: "Srul", img: "https://ep01.epimg.net/cultura/imagenes/2017/06/26/television/1498473684_141038_1498480140_noticia_normal.jpg"},
+                {name: "Nadav", img: "https://ae01.alicdn.com/kf/HTB1IWWZc4k98KJjSZFoq6xS6pXaF/Free-Shipping-Halloween-Carnival-Masquerade-Adult-Cosplay-The-Mask-Costume-Props-Eco-friendly-Latex-Jim-Carrey.jpg_640x640.jpg"},
+                {name: "Shiran", img: "https://lgbtfansdeservebetter.com/static/uploads/2017/03/Maia-Rose-Leslie.png"},
+                {name: "Chen", img: "https://thumbs.gfycat.com/IcyAgedGreendarnerdragonfly-poster.jpg"}
             ]
         }
 
@@ -25,9 +25,10 @@ class Landing  extends Component {
                     .map(u =>
                     <Link to ="/catalog" style={{ textDecoration: 'none' }}> 
                         <div id="user" key = {u.name} style={{backgroundImage: `url(${u.img})`}} >
-                            {u.name}
                         </div>
+                        {u.name}
                     </Link>)}
+
             </div>
         </div>
         )
